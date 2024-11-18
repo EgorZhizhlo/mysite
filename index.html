@@ -592,7 +592,13 @@
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('active');
-        }
+        };
+        document.addEventListener('DOMContentLoaded', function () {
+            const unwantedLinks = document.querySelectorAll('a[href="https://yhub.net?ref=free-site"]');
+            unwantedLinks.forEach(function (link) {
+                link.remove();
+            });
+        });
     </script>
 </body>
 
